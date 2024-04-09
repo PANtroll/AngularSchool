@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img src="{{book.img}}" class="card-img-top" alt="Okładka" height="400px" width="300px">
+  <div class="card-body">
+    <h5 class="card-title">{{book.title}}</h5>
+    <h5 class="card-title">{{book.author}}</h5>
+    <h5 class="card-title">{{book.category}}</h5>
+    <span *ngIf='book.status==="Dostępna"' class="badge rounded-pill text-bg-success">Dostępna</span>
+    <span *ngIf='book.status==="Zgubiona"' class="badge rounded-pill text-bg-secondary">Zgubiona</span>
+    <span *ngIf='book.status==="Zniszczona"' class="badge rounded-pill text-bg-warning">Zniszczona</span>
+  </div>
+</div>

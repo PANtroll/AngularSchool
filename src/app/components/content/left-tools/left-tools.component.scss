@@ -1,0 +1,22 @@
+$itemColor: gray;
+$hoverColor: lightgray;
+
+:host{
+  background-color: lightgray;
+  display: flex;
+  flex-flow: column;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  width: 250px;
+  height:100%;
+}
+.item{
+  padding-top: 20px;
+  background-color: $itemColor;
+  width: 100%;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+}

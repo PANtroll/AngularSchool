@@ -1,0 +1,58 @@
+{
+  "book": [
+    {
+      "id": 1,
+      "img": "https://ecsmedia.pl/c/anyway-w-iext121723156.jpg",
+      "title": "Anyway",
+      "author": "Świst Paulina",
+      "publisher": "Akurat",
+      "isbn": "9780847817665",
+      "date": "2020-10-10",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit maximus dolor id pulvinar. Sed id est enim. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus egestas enim quam, maximus maximus sapien pellentesque quis. Maecenas et justo odio. Donec ut viverra arcu. Suspendisse potenti. Vestibulum nec placerat purus. Donec porta nibh ut metus commodo, feugiat condimentum enim dignissim. Mauris nec posuere risus. ",
+      "category": "Kryminał",
+      "status": "Dostępna"
+    },
+    {
+      "img": "https://ecsmedia.pl/c/ashes-the-chain-tom-3-w-iext121713980.jpg",
+      "title": "Ashes. The Chain",
+      "author": "Rutka Monika ",
+      "publisher": "BeYA",
+      "category": "Literatura Obyczajowa",
+      "date": "2019-01-04",
+      "isbn": "9788328395909",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit maximus dolor id pulvinar. Sed id est enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "status": "Zgubiona",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "img": "https://ecsmedia.pl/c/rodzina-monet-skarb-w-iext120717493.jpg",
+      "title": "Przyjaciele, kochankowie i ta Wielka Straszna Rzecz",
+      "author": "Matthew Perry",
+      "publisher": "W.A.B.",
+      "isbn": "9788383182070",
+      "date": "2022-10-03",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit maximus dolor id pulvinar. Sed id est enim. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "category": "Biografia",
+      "status": "Zniszczona"
+    },
+    {
+      "img": "https://ecsmedia.pl/c/48-praw-wladzy-w-iext121665416.jpg",
+      "title": "48 praw władzy",
+      "author": "Robert Greene",
+      "publisher": "Czarna Owca ",
+      "category": "Podręczniki",
+      "date": "2021-10-13",
+      "isbn": "9788467039054",
+      "description": "Lorem ipsum...",
+      "status": "Dostępna",
+      "id": 4
+    }
+  ],
+  "user": [
+    {
+      "name": "Tomasz",
+      "login": "twawrzyn"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+<div class="row">
+  <div class="col-4" >
+    <img class="float-end me-1" width="300px" height="400px" *ngIf="!bookForm.get('img')?.hasError('error')"
+         src="{{bookForm.value.img}}" alt="">
+  </div>
+  <form class="col-4 mx-auto" [formGroup]="bookForm" (change)="isDirtyForm()">
+    <div class="mb-3">
+      <label for="img" class="form-label">Url okładki: </label>
+      <input type="text" class="form-control" id="img" formControlName="img">
+      <div *ngIf="bookForm.get('img')?.hasError('maxlength')">Zbyt długa nazwa</div>
+      <div *ngIf="bookForm.get('img')?.hasError('error')">{{bookForm.get('img')?.getError('error')}}</div>
+    </div>
+    <div class="mb-3">
+      <label for="title" class="form-label">Tytuł: </label>
+      <input type="text" class="form-control" id="title" formControlName="title">
+      <div *ngIf="bookForm.get('title')?.hasError('required')">Pole wymagane</div>
+      <div *ngIf="bookForm.get('title')?.hasError('maxlength')">Zbyt długa nazwa</div>
+    </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Autor: </label>
+      <input type="text" class="form-control" id="author" formControlName="author">
+      <div *ngIf="bookForm.get('author')?.hasError('required')">Pole wymagane</div>
+      <div *ngIf="bookForm.get('author')?.hasError('maxlength')">Zbyt długa nazwa</div>
+    </div>
+    <div class="mb-3">
+      <label for="publisher" class="form-label">Wydawnictwo: </label>
+      <input type="text" class="form-control" id="publisher" formControlName="publisher">
+      <div *ngIf="bookForm.get('publisher')?.hasError('required')">Pole wymagane</div>
+      <div *ngIf="bookForm.get('publisher')?.hasError('maxlength')">Zbyt długa nazwa</div>
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Kategoria: </label>
+      <select id="category" class="form-select" formControlName="category">
+        <option value="Kryminał">Kryminał</option>
+        <option value="Dla dzieci">Dla dzieci</option>
+        <option value="Literatura obyczajowa">Literatura obyczajowa</option>
+        <option value="Reportaż">Reportaż</option>
+        <option value="Biografie">Biografie</option>
+        <option value="Fantasy">Fantasy</option>
+        <option value="Romans">Fantasy</option>
+        <option value="Komiksy">Komiksy</option>
+        <option value="Poezja">Poezja</option>
+        <option value="Podręczniki">Podręczniki</option>
+      </select>
+      <div *ngIf="bookForm.get('category')?.hasError('required')">Pole wymagane</div>
+    </div>
+    <div class="mb-3">
+      <label for="date" class="form-label">Data wydania: </label>
+      <input type="date" class="form-control" id="date" formControlName="date">
+      <div *ngIf="bookForm.get('date')?.hasError('required')">Pole wymagane</div>
+    </div>
+    <div class="mb-3">
+      <label for="isbn" class="form-label">Numer ISBN: </label>
+      <input type="text" class="form-control" id="isbn" formControlName="isbn">
+      <div *ngIf="bookForm.get('isbn')?.hasError('error')">{{bookForm.get('isbn')?.getError('error')}}</div>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Opis: </label>
+      <textarea class="form-control" id="description" formControlName="description"></textarea>
+      <div *ngIf="bookForm.get('description')?.hasError('required')">Pole wymagane</div>
+    </div>
+    <label for="status" class="form-label">Status: </label>
+    <div class="form-check" id="status">
+      <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1" value="Dostępna" formControlName="status" checked>
+      <label class="form-check-label" for="flexRadioDefault1">Dostępny</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2" value="Zgubiona" formControlName="status">
+      <label class="form-check-label" for="flexRadioDefault2">Zgubiony</label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="status" id="flexRadioDefault3" value="Zniszczona" formControlName="status">
+      <label class="form-check-label" for="flexRadioDefault3">Zniszczony</label>
+    </div>
+    <div *ngIf="bookForm.get('status')?.hasError('required')">Pole wymagane</div>
+    <div class="mx-auto col-3">
+      <button type="button" class="btn btn-primary me-1" routerLink="">Anuluj</button>
+      <button type="button" class="btn btn-primary" [disabled]="bookForm.invalid" (click)="send()">Zapisz</button>
+    </div>
+  </form>
+  <div class="col-4" ></div>
+</div>

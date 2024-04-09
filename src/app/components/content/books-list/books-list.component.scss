@@ -1,0 +1,13 @@
+:host {
+  .bookList {
+    padding-top: -70px;
+    margin-left: -70px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: stretch;
+    gap: 15px;
+  }
+}

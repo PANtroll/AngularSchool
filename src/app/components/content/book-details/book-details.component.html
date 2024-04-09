@@ -1,0 +1,36 @@
+<div *ngIf="(book$ | async) as book">
+  <form [formGroup]="statusForm">
+    <div class="container mx-auto" *ngIf="(!isEdit)">
+      <div class="row">
+        <div class="col-3">
+          <img src="{{book.img}}" alt="Okładka" height="400px" width="300px"/>
+          <input type="number" [(ngModel)]="book.id" formControlName="bookId" hidden/>
+        </div>
+        <div class="col-9">
+          <p>Tytuł: {{book.title}}</p>
+          <p>Autor: {{book.author}}</p>
+          <p>Wydawnictwo: {{book.publisher}}</p>
+          <p>Kategoria: {{book.category}}</p>
+          <p>Data publikacji: {{book.date}}</p>
+          <p>ISBN: {{book.isbn}}</p>
+          <p>Opis: {{book.description}}</p>
+          <div class="row ms-0">Status:
+            <div class="col-2">
+              <select id="status" class="form-select" formControlName="status" (change)="changeStatus()" [(ngModel)]="book.status">
+                <option value="Dostępna">Dostępna</option>
+                <option value="Zgubiona">Zgubiona</option>
+                <option value="Zniszczona">Zniszczona</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-end">
+        <button class="col-1 btn btn-primary" (click)="showEdit()">Edytuj</button>
+      </div>
+    </div>
+    <as-book-form [book]="book" *ngIf="isEdit"></as-book-form>
+  </form>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,7 @@
+<div class="bookList" *ngIf="books$ | async as books">
+  <div *ngFor="let book of books">
+    <a routerLink='/book/{{book.id}}/{{book.title.replaceAll(" ", "_")}}'>
+      <as-book-card [book]="book" class="item"></as-book-card>
+    </a>
+  </div>
+</div>

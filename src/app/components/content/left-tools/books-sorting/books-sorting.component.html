@@ -1,0 +1,10 @@
+<h2 class="pb-1">Sortowanie</h2>
+<div class="mx-auto col-10">
+  <form [formGroup]="sortingForm">
+<select id="sort" class="form-select" (change)="sortingChange()" formControlName="sortingType" >
+  <option value="title" selected>Tytuł</option>
+  <option value="author">Autor</option>
+  <option value="date">Data publikacji</option>
+</select>
+  </form>
+</div>

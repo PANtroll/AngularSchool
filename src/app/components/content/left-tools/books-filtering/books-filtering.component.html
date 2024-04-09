@@ -1,0 +1,49 @@
+<h2>Wyszukiwanie</h2>
+<form [formGroup]="filteringForm">
+<div class="mb-3 mx-auto col-10">
+  <label for="title" class="form-label">Tytuł</label>
+  <input id="title" type="text" class="form-control" formControlName="title" (input)="updateFilters()"/>
+</div>
+<div class="mb-3 mx-auto col-10">
+  <label for="author" class="form-label">Autor</label>
+  <input id="author" type="text" class="form-control" formControlName="author" (input)="updateFilters()"/>
+</div>
+<div class="mb-3 mx-auto col-10">
+  <label for="publisher" class="form-label">Wydawnictwo</label>
+  <input id="publisher" type="text" class="form-control" formControlName="publisher"  (input)="updateFilters()"/>
+</div>
+<div class="mb-3 mx-auto col-10">
+  <label for="category" class="form-label">Kategoria</label>
+  <select id="category" class="form-select" formControlName="category" (change)="updateFilters()">
+    <option value="">Wszystkie</option>
+    <option value="Kryminał">Kryminał</option>
+    <option value="Dla dzieci">Dla dzieci</option>
+    <option value="Literatura Obyczajowa">Literatura obyczajowa</option>
+    <option value="Reportaż">Reportaż</option>
+    <option value="Biografie">Biografie</option>
+    <option value="Fantasy">Fantasy</option>
+    <option value="Romans">Fantasy</option>
+    <option value="Komiksy">Komiksy</option>
+    <option value="Poezja">Poezja</option>
+    <option value="Podręczniki">Podręczniki</option>
+  </select>
+</div>
+<div class="mb-3 mx-auto col-10">
+  <label for="status" class="form-label">Status</label>
+  <ul class="list-group" id="status" >
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="dostępna" id="Dostępna" formControlName="status1" (change)="updateFilters()">
+      <label class="form-check-label stretched-link" for="Dostępna">Dostępna</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="zgubiona" id="Zgubiona" formControlName="status2" (change)="updateFilters()">
+      <label class="form-check-label stretched-link" for="Zgubiona">Zgubiona</label>
+    </li>
+    <li class="list-group-item">
+      <input class="form-check-input me-1" type="checkbox" value="zniszczona" id="Zniszczona" formControlName="status3" (change)="updateFilters()">
+      <label class="form-check-label stretched-link" for="Zniszczona">Zniszczona</label>
+    </li>
+  </ul>
+</div>
+</form>
+
